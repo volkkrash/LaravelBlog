@@ -50,7 +50,6 @@
         </div>
         <!-- /.card -->
       </div>
-      
       <div class="col-12">
         <div>
         {{ $contacts->links() }}

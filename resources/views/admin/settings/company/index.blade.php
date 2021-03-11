@@ -146,7 +146,7 @@
                                   <label class="custom-file-label" for="soc_icon">Choose icon</label>
                                 </div>
                                 <div class="icon col-12">
-                                  <img height="50px" src="{{ asset("uploads/{$socItem->icon}") }}" alt="">
+                                  <img class="preview" height="50px" src="{{ asset("uploads/{$socItem->icon}") }}" alt="">
                                 </div>
                               </div>
 
@@ -177,4 +177,28 @@
       </div>
     </div>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      function readURL(input) {
+
+      if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+            
+            let img = input.closest(".input-group").querySelector('img.preview');
+            img.setAttribute('src', e.target.result);
+          };
+
+          reader.readAsDataURL(input.files[0]);
+      }
+      }
+
+      $("input[type=file]").change(function(){
+      readURL(this);
+      });
+    });
+  </script>
+
 @endsection

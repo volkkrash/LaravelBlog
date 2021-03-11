@@ -63,7 +63,7 @@
                             <!-- Header Logo Start -->
                             <div class="header-logo">
                                 <a href="{{ route('home') }}">
-                                    <img class="fit-image" src="{{ asset('assets/images/logo/logo-white.png') }}" alt="Header Logo">
+                                    <img class="fit-image" src="{{ asset('uploads/images/logos/header_logo.png') }}" alt="Header Logo">
                                 </a>
                             </div>
                             <!-- Header Logo End -->

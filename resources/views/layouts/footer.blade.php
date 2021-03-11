@@ -9,7 +9,7 @@
                 <div class="col-12 text-center">
                     <!-- Footer Logo Start -->
                     <div class="footer-logo">
-                        <a href="index.html"><img src="{{ asset('/assets/images/logo/logo-black.png') }}" alt="Logo Black" /></a>
+                        <a href="index.html"><img src="{{ asset('uploads/images/logos/footer_logo.png') }}" alt="Logo Black" /></a>
                     </div>
                     <!-- Footer Logo End -->
 

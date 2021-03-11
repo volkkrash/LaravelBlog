@@ -43,6 +43,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::group(['prefix' => 'settings'], function () {
         Route::get('company', [Admin\CompanyContactDataController::class, 'index'])->name('admin.settings.company.index');
         Route::put('company', [Admin\CompanyContactDataController::class, 'update'])->name('admin.settings.company.update');
+
+        Route::get('site-settings', [Admin\SettingsController::class, 'index'])->name('admin.settings.site-settings.index');
+        Route::put('site-settings', [Admin\SettingsController::class, 'update'])->name('admin.settings.site-settings.update');
     });
 });
 

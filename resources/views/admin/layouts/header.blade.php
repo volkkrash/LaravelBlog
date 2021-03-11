@@ -277,6 +277,12 @@
                   <p>Company info</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="{{ route('admin.settings.site-settings.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Site Settings</p>
+                </a>
+              </li>
             </ul>
           </li>
         </ul>

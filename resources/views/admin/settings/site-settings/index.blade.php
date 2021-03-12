@@ -54,7 +54,7 @@
               </div>
             </div>
             <div class="form-group">
-              <h5 for="company_address">Footer logo</h5>
+              <h5>Footer logo</h5>
               <div class="input-group col-12"> 
                 <div class="col-2 icon py-4 bg-secondary">
                   <img class="preview" style="max-width:100%;" src="{{ asset($settings->footer_logo) }}" alt="">
@@ -64,7 +64,6 @@
                     <input type="file" class="custom-file-input" id="footer_logo" name="footer_logo">
                     <label class="custom-file-label" for="soc_icon">Choose logo</label>
                   </div>
-                  <img class="uploaded-preview" style="max-height: 100px;" src="" alt="">
                 </div>
                 
               </div>
@@ -91,7 +90,7 @@
 
           reader.onload = function (e) {
             
-            let img = input.closest(".file-container").querySelector('img.uploaded-preview');
+            let img = input.closest(".form-group").querySelector('img.preview');
             img.setAttribute('src', e.target.result);
           };
 

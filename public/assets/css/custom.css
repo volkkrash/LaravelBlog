@@ -1,0 +1,33 @@
+
+.footer-nav a,
+.mobile-menu a {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+.footer-nav a {
+  display: block;
+  max-width: 100px;
+}
+
+.main-menu a {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100px;
+}
+.submenu a {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 200px;
+}
+
+.mobile-menu-inner-top .logo-mobile img {
+  max-width: 100%;
+}
+.footer-logo img {
+  max-height: 200px;
+}

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers;
 use App\Http\Controllers\Admin;
 // use App\Http\Controllers\Admin\MainController;
 // use App\Http\Controllers\Admin\ContactController;
@@ -18,20 +19,20 @@ use App\Http\Controllers\Admin;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+Route::get("/{slug?}", [Controllers\HomeController::class, 'index'], ['slug' => 'slug'])->name('home');
 
 
 Route::get('about', function () {
     return view('about.index');
 })->name('about');
-
-// Route::get('contact', function () {
-//     return view('contact.index');
-// })->name('contact');
-Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact');
-Route::post('/contact', [App\Http\Controllers\ContactController::class, 'store'])->name('contactForm');
+Route::get('blog', function () {
+    return view('news.blog');
+})->name('blog');
+Route::get('blog-details', function () {
+    return view('news.blog');
+})->name('blogDetails');
+Route::get('/contact', [Controllers\ContactController::class, 'index'])->name('contact');
+Route::post('/contact', [Controllers\ContactController::class, 'store'])->name('contactForm');
 
 Auth::routes();
 
@@ -40,8 +41,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/', [Admin\MainController::class, 'index'])->name('admin.index');
     Route::get('contact', [Admin\ContactController::class, 'index'])->name('admin.contact.index');
     
-    Route::resource('menu', Admin\MenuController::class);
-    
+    Route::resource('menu', Admin\MenuController::class, ['except' => ['show']]);
+    Route::resource('main-slider', Admin\MainSliderController::class);
     
 
     Route::group(['prefix' => 'settings'], function () {

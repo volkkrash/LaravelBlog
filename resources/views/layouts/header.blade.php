@@ -37,11 +37,14 @@
     <!-- Main Style CSS -->
 
 <link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('/assets/css/custom.css') }}">
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
 
 
-
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.min.css') }}">  
     <!-- 
     <link rel="stylesheet" href="assets/css/vendor.min.css">
     <link rel="stylesheet" href="assets/css/plugins.min.css">
@@ -51,11 +54,11 @@
 
 <body>
     <!-- Header Section Start -->
-    <div class="header header-transparent-bg section-fluid">
+    <div class="header {!! (Route::is('home') ? 'header-transparent-bg section-fluid' : 'header section-fluid border-bottom') !!} ">
 
         <!-- Header Wrapper Start -->
         <div class="header-wrapper">
-            <div class="header-sticky">
+            <div class="header-sticky {!! (Route::is('home') ? '' : 'bg-white') !!}">
                 <div class="container-fluid">
                     <div class="row align-items-center">
 
@@ -76,7 +79,7 @@
                             <div class="main-menu-language-wrapper">
 
                                 <!-- Main Menu Start -->
-                                <nav class="main-menu main-menu-white">
+                                <nav class="main-menu {!! (Route::is('home') ? 'main-menu-white' : '') !!}">
                                     <ul>
                                         @include('particles.header-menu')
                                     </ul>
@@ -84,7 +87,7 @@
                                 <!-- Main Menu End -->
 
                                 <!-- Language Start -->
-                                <div class="language language-white d-md-none d-lg-flex">
+                                <div class="language {!! (Route::is('home') ? 'language-white' : '') !!} d-md-none d-lg-flex">
                                     <a href="#">Eng</a>
                                     <a href="#"> <span>Fra</span></a>
                                 </div>
@@ -98,7 +101,7 @@
                         <div class="col-lg-2 col-md-2 col-6">
 
                             <!-- Mobile Menu Hamburger Start -->
-                            <div class="mobile-menu-hamburger mobile-menu-hamburger-white">
+                            <div class="mobile-menu-hamburger {!! (Route::is('home') ? 'mobile-menu-hamburger-white' : '') !!}">
                                 <a href="javascript:void(0)">
                                     <span>Menu</span>
                                     <i class="icon ion-android-menu"></i>
@@ -125,7 +128,7 @@
 
                     <!-- Mobile Menu Logo Start  -->
                     <div class="logo-mobile">
-                        <img src="assets/images/logo/logo-black.png" alt="Logo">
+                        <img src="{{ asset('uploads/images/logos/footer_logo.png') }}" alt="Logo">
                     </div>
                     <!-- Mobile Menu Logo End -->
 

@@ -14,59 +14,7 @@
         <div class="hero-slider">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-
-                    <!-- Hero Slider Item Start -->
-                    <div class="hero-slide-item swiper-slide">
-
-                        <!-- Hero Slider Bg Image Start -->
-                        <div class="hero-slide-bg">
-                            <img src="assets/images/slider/slide-1.jpg" alt="Slider Image" />
-                        </div>
-                        <!-- Hero Slider Bg image End -->
-
-                        <!-- Hero Slider Content Start -->
-                        <div class="container">
-                            <div class="hero-slide-content">
-                                <h4 class="subtitle">Residence</h4>
-                                <h2 class="title">
-                                    Dustin Villa, <br />
-										Spain
-                                </h2>
-                                <p>Combine with ideas of owner, Dustin Mahone. Arquito’s team completed a super villa with many powerful features, help owner really enjoy his life beside the beach</p>
-                                <a href="project.html" class="btn-link">See Project</a>
-                            </div>
-                        </div>
-                        <!-- Hero Slider Content End -->
-
-                    </div>
-                    <!-- Hero Slider Item End -->
-
-                    <!-- Hero Slider Item Start -->
-                    <div class="hero-slide-item swiper-slide">
-
-                        <!-- Hero Slider Bg Image Start -->
-                        <div class="hero-slide-bg">
-                            <img src="assets/images/slider/slide-1.jpg" alt="Slider Image" />
-                        </div>
-                        <!-- Hero Slider Bg Image End -->
-
-                        <!-- Hero Slider Content Start -->
-                        <div class="container">
-                            <div class="hero-slide-content">
-                                <h4 class="subtitle">Residence</h4>
-                                <h2 class="title">
-                                    Dustin Villa, <br />
-										Spain
-                                </h2>
-                                <p>Combine with ideas of owner, Dustin Mahone. Arquito’s team completed a super villa with many powerful features, help owner really enjoy his life beside the beach</p>
-                                <a href="project.html" class="btn-link">See Project</a>
-                            </div>
-                        </div>
-                        <!-- Hero Slider Content End -->
-
-                    </div>
-                    <!-- Hero Slider Item End -->
-
+                    @include('particles.main-slider')
                 </div>
 
                 <!-- Swiper Pagination Start -->

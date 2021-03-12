@@ -19,6 +19,7 @@ class CreateMenusTable extends Migration
             $table->string('slug');
             $table->integer('sort')->default(500);
             $table->integer('parent_id')->unsigned()->nullable()->index();
+            $table->foreign('parent_id')->references('id')->on('menus')->onDelete('cascade');
             $table->timestamps();
         });
     }

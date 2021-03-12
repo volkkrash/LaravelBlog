@@ -30,5 +30,9 @@ class AppServiceProvider extends ServiceProvider
                     'socialsData' => \App\Models\SocialService::getData()
                 ]);
         });
+
+        view()->composer('layouts.index', function($view) {
+            $view->with('mainMenu', \App\Models\Menu::with('children')->where('parent_id', NULL)->orderBy('sort')->get());
+        });
     }
 }

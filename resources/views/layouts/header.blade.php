@@ -78,29 +78,7 @@
                                 <!-- Main Menu Start -->
                                 <nav class="main-menu main-menu-white">
                                     <ul>
-                                        <li>
-                                            <a class="active" href="{{ route('home') }}">Home</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Works</a>
-                                            <ul class="submenu">
-                                                <li><a href="project.html">Project</a></li>
-                                                <li><a href="project-details.html">Project Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">News</a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog-details.html">Blog Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route('about') }}">About</a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route('contact') }}">Contact</a>
-                                        </li>
+                                        @include('particles.header-menu')
                                     </ul>
                                 </nav>
                                 <!-- Main Menu End -->
@@ -164,25 +142,7 @@
                 <div class="mobile-navigation">
                     <nav>
                         <ul class="mobile-menu">
-                            <li class="has-children">
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li class="has-children">
-                                <a href="#">Works <i class="icofont-rounded-down" aria-hidden="true"></i></a>
-                                <ul class="dropdown">
-                                    <li><a href="project.html">Project</a></li>
-                                    <li><a href="project-details.html">Project Details</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-children">
-                                <a href="#">News <i class="icofont-rounded-down" aria-hidden="true"></i></a>
-                                <ul class="dropdown">
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            @include('particles.header-mobile-menu')
                         </ul>
                     </nav>
                 </div>

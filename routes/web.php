@@ -39,6 +39,10 @@ Auth::routes();
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/', [Admin\MainController::class, 'index'])->name('admin.index');
     Route::get('contact', [Admin\ContactController::class, 'index'])->name('admin.contact.index');
+    
+    Route::resource('menu', Admin\MenuController::class);
+    
+    
 
     Route::group(['prefix' => 'settings'], function () {
         Route::get('company', [Admin\CompanyContactDataController::class, 'index'])->name('admin.settings.company.index');

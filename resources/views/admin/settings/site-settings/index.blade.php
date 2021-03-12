@@ -60,7 +60,7 @@
                   <img class="preview" style="max-width:100%;" src="{{ asset($settings->footer_logo) }}" alt="">
                 </div>        
                 <div class="col-10 file-container">
-                  <div class="col-10 custom-file">
+                  <div class="custom-file">
                     <input type="file" class="custom-file-input" id="footer_logo" name="footer_logo">
                     <label class="custom-file-label" for="soc_icon">Choose logo</label>
                   </div>

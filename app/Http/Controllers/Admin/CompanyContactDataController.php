@@ -15,7 +15,7 @@ class CompanyContactDataController extends Controller
     public function index() {
         $data = CompanyContactData::find(1);
         $socialsData = $data->socials()->get();
-        //dd($data->socials()->get());
+
         return view('admin.settings.company.index', compact('data', 'socialsData'));
     }
 
@@ -37,7 +37,6 @@ class CompanyContactDataController extends Controller
         );
 
         $data = $request->all();
-        
 
         CompanyContactData::socialsUpdate($data);
 

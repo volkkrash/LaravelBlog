@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
@@ -10,7 +9,6 @@ use App\Models\SocialService;
 
 class CompanyContactData extends Model
 {
-    use HasFactory;
 
     public $fillable = [
         'company_address', 'company_phone', 'company_email'

@@ -187,6 +187,12 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{ route('menu.index') }}" class="nav-link">
+              <i class="fas fa-bars nav-icon"></i>
+              <p>Site menu</p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="{{ route('admin.contact.index') }}" class="nav-link">
               <i class="far fa-circle nav-icon"></i>
               <p>Contact Form</p>

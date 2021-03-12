@@ -15,11 +15,7 @@
 
                     <!-- Footer Nav Start -->
                     <ul class="footer-nav mb-n3">
-                        <li class="mb-3"><a href="index.html">Home</a></li>
-                        <li class="mb-3"><a href="project.html">Works</a></li>
-                        <li class="mb-3"><a href="blog.html">News</a></li>
-                        <li class="mb-3"><a href="about.html">About</a></li>
-                        <li class="mb-3"><a href="contact.html">Contact</a></li>
+                        @include('particles.footer-menu')
                     </ul>
                     <!-- Footer Nav End -->
 

@@ -19,7 +19,7 @@ use App\Http\Controllers\Admin;
 |
 */
 
-Route::get("/{slug?}", [Controllers\HomeController::class, 'index'], ['slug' => 'slug'])->name('home');
+
 
 
 Route::get('about', function () {
@@ -43,6 +43,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     
     Route::resource('menu', Admin\MenuController::class, ['except' => ['show']]);
     Route::resource('main-slider', Admin\MainSliderController::class);
+    Route::resource('pages', Admin\PageController::class, ['except' => ['show']]);
     
 
     Route::group(['prefix' => 'settings'], function () {
@@ -54,3 +55,4 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     });
 });
 
+Route::get("/{slug?}", [Controllers\HomeController::class, 'index'], ['slug' => 'slug'])->name('home');

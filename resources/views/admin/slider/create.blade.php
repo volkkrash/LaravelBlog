@@ -24,7 +24,7 @@
       <div class="form-group">
         <div class="custom-control custom-checkbox">
           <input class="custom-control-input" type="checkbox" name="active" id="active" checked="">
-          <label for="active" class="custom-control-label">Custom Checkbox</label>
+          <label for="active" class="custom-control-label">active</label>
         </div>
       </div>
       <div class="form-group">

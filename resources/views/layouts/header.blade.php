@@ -36,8 +36,8 @@
 
     <!-- Main Style CSS -->
 
-<link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}">
-<link rel="stylesheet" href="{{ asset('/assets/css/custom.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/custom.css') }}">
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
 
@@ -66,7 +66,7 @@
                             <!-- Header Logo Start -->
                             <div class="header-logo">
                                 <a href="{{ route('home') }}">
-                                    <img class="fit-image" src="{{ asset('uploads/images/logos/header_logo.png') }}" alt="Header Logo">
+                                    <img class="fit-image" src="{{(Route::is('home') ? asset('uploads/images/logos/header_logo.png') : asset('uploads/images/logos/footer_logo.png')) }}" alt="Header Logo">
                                 </a>
                             </div>
                             <!-- Header Logo End -->

@@ -205,16 +205,12 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('pages.index') }}" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Pages
-                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              
-            </ul>
           </li>
           <li class="nav-item menu-is-opening menu-open">
             <a href="javascript:void(0);" class="nav-link">

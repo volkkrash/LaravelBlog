@@ -46,15 +46,13 @@
             
           </div>
           <!-- /.card-body -->
-          
+          <div class="card-footer clearfix">
+            {{ $contacts->links() }}
+          </div>
         </div>
         <!-- /.card -->
       </div>
-      <div class="col-12">
-        <div>
-        {{ $contacts->links() }}
-        </div>
-      </div>
+      
   
     </div>
 @endsection
